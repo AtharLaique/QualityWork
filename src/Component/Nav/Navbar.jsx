@@ -13,12 +13,12 @@ export default function Navbar() {
           mode='horizontal'
           defaultSelectedKeys={["-1"]}
           style={{ lineHeight: "64px" }}>
-          <Menu.Item key='-1' style={{ padding: "0px" }}>
+          <Menu.Item key='-1' style={{ padding: "0px"  ,marginRight:'93px',marginLeft:'60px'}}>
             <Link to='/'>
               <img
                 src={require("../../Assets/Images/logo.png")}
-                width='222px'
-                height='64px'
+                width='70px'
+                height='54px'
               />
             </Link>
           </Menu.Item>
