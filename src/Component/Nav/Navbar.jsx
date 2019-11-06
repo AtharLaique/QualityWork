@@ -50,7 +50,8 @@ export default function Navbar() {
             <Link to='/angular'>
               <b style={{ color: "#f96167" }}>
                 {" "}
-                <Icon type='build' style={{ marginRight: "2px" }} />
+                <Icon type="gitlab" style={{ marginRight: "2px" }} />
+               
                 Angular8
               </b>
             </Link>

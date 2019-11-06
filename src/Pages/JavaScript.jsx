@@ -4,7 +4,6 @@ import Option1 from "../Content/ContentOfJavaScript/option1";
 import Option2 from "../Content/ContentOfJavaScript/option2";
 import Option3 from "../Content/ContentOfJavaScript/option3";
 import { Menu, Row, Col } from "antd";
-import Editor from "react-simple-code-editor";
 import "antd/dist/antd.css";
 
 const { SubMenu } = Menu;

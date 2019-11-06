@@ -3,7 +3,9 @@ import WelcomeToJs from "../Content/ContentOfJavaScript/welcomeToJS";
 import Option1 from "../Content/ContentOfJavaScript/option1";
 import Option2 from "../Content/ContentOfJavaScript/option2";
 import Option3 from "../Content/ContentOfJavaScript/option3";
-import { Menu, Row, Col } from "antd";
+import Quries from "../Content/ContentOfNodeJS/Quries"
+import RemoteMathod from "../Content/ContentOfNodeJS/RemoteMathod"
+import { Menu, Row, Col ,Icon} from "antd";
 import "antd/dist/antd.css";
 
 const { SubMenu } = Menu;
@@ -12,8 +14,8 @@ export default class NodeJs extends Component {
   rootSubmenuKeys = ["sub1", "sub2", "sub4"];
 
   state = {
-    openKeys: ["sub1"],
-    opt: "0"
+    openKeys: ["sub2"],
+    opt: "6"
   };
 
   onOpenChange = openKeys => {
@@ -33,7 +35,7 @@ export default class NodeJs extends Component {
     this.setState({ opt: e.key });
   };
   render() {
-    console.log(this.state.opt);
+
     return (
       <div>
         <Row>
@@ -54,12 +56,12 @@ export default class NodeJs extends Component {
                   Option 3
                 </Menu.Item>
               </SubMenu>
-              <SubMenu key='sub2' title={<b>Navigation Two</b>}>
+              <SubMenu key='sub2' title={<b><Icon type="codepen" />LoopBack</b>}>
                 <Menu.Item key='5' onClick={this.onOptionChange}>
-                  Option 5
+                  Quries
                 </Menu.Item>
                 <Menu.Item key='6' onClick={this.onOptionChange}>
-                  Option 6
+                 RemoteMathod
                 </Menu.Item>
               </SubMenu>
             </Menu>
@@ -69,6 +71,8 @@ export default class NodeJs extends Component {
             {this.state.opt === "1" ? <Option1 /> : null}
             {this.state.opt === "2" ? <Option2 /> : null}
             {this.state.opt === "3" ? <Option3 /> : null}
+            {this.state.opt === "5" ? <Quries /> : null}
+            {this.state.opt === "6" ? <RemoteMathod /> : null}
           </Col>
         </Row>
       </div>

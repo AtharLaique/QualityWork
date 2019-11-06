@@ -3,7 +3,8 @@ import WelcomeToJs from "../Content/ContentOfJavaScript/welcomeToJS";
 import Option1 from "../Content/ContentOfJavaScript/option1";
 import Option2 from "../Content/ContentOfJavaScript/option2";
 import Option3 from "../Content/ContentOfJavaScript/option3";
-import { Menu, Row, Col } from "antd";
+import Fusioncharts from "../Content/ContentOfReactJS/Fusioncharts";
+import { Menu, Row, Col, Icon } from "antd";
 import "antd/dist/antd.css";
 
 const { SubMenu } = Menu;
@@ -54,9 +55,16 @@ export default class ReactJs extends Component {
                   Option 3
                 </Menu.Item>
               </SubMenu>
-              <SubMenu key='sub2' title={<b>Navigation Two</b>}>
+              <SubMenu
+                key='sub2'
+                title={
+                  <b>
+                    <Icon type='file-zip' />
+                    NPM ASSETS
+                  </b>
+                }>
                 <Menu.Item key='5' onClick={this.onOptionChange}>
-                  Option 5
+                  <b><Icon type="bar-chart" />Fusioncharts</b>
                 </Menu.Item>
                 <Menu.Item key='6' onClick={this.onOptionChange}>
                   Option 6
@@ -69,6 +77,7 @@ export default class ReactJs extends Component {
             {this.state.opt === "1" ? <Option1 /> : null}
             {this.state.opt === "2" ? <Option2 /> : null}
             {this.state.opt === "3" ? <Option3 /> : null}
+            {this.state.opt === "5" ? <Fusioncharts /> : null}
           </Col>
         </Row>
       </div>
